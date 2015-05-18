@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var messageLabel: UILabel!
     
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    
     @IBOutlet weak var enterNameTextField: UITextField!
     
     @IBOutlet weak var enterMessageTextField: UITextField!
@@ -46,6 +50,20 @@ class ViewController: UIViewController {
         
         mailButton.setTitle("Mail Sent", forState: UIControlState.Normal)
         
+        //Unhide Name Label, Update nameLabel's text to display the info in nameTextField
+        
+        //change the nameLabel's text color to Blue
+        //clear the nameTextField's text
+        
+        nameLabel.hidden = false
+        nameLabel.text = enterNameTextField.text
+        nameLabel.textColor = UIColor.blueColor()
+        enterNameTextField.text=""
+        enterNameTextField.resignFirstResponder()
+        
+        
+    
+    
     }
     
     
